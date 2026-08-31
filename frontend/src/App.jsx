@@ -1,121 +1,80 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app">
+      <header className="navbar">
+        <div className="logo">LinkedOut</div>
 
-      <div className="ticks"></div>
+        <nav className="nav-links">
+          <a href="#companies">Companies</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#about">About</a>
+        </nav>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div className="nav-actions">
+          <button className="login-button">Sign in</button>
+          <button className="signup-button">Join LinkedOut</button>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <main>
+        <section className="hero">
+          <div className="hero-content">
+            <p className="eyebrow">REAL WORKPLACE EXPERIENCES</p>
+
+            <h1>
+              Find out what it’s really like
+              <span> to work there.</span>
+            </h1>
+
+            <p className="hero-description">
+              Explore honest employee experiences, company reviews,
+              workplace culture, and career insights — all in one place.
+            </p>
+
+            <div className="search-box">
+              <input
+                type="text"
+                placeholder="Search for a company..."
+              />
+              <button>Search</button>
+            </div>
+          </div>
+        </section>
+
+        <section className="companies" id="companies">
+          <div className="section-heading">
+            <p className="eyebrow">EXPLORE</p>
+            <h2>Discover companies</h2>
+            <p>
+              Explore what employees are saying about the places they work.
+            </p>
+          </div>
+
+          <div className="company-grid">
+            <div className="company-card">
+              <h3>Tech Companies</h3>
+              <p>Explore workplace experiences in technology.</p>
+            </div>
+
+            <div className="company-card">
+              <h3>Startups</h3>
+              <p>Discover what it’s like behind the startup culture.</p>
+            </div>
+
+            <div className="company-card">
+              <h3>Top Employers</h3>
+              <p>See companies employees are talking about.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <p>© 2026 LinkedOut. Built to make workplace experiences more transparent.</p>
+      </footer>
+    </div>
   )
 }
 
